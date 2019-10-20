@@ -10,7 +10,7 @@ import android.widget.ImageButton;
 
 
 public class MainActivity extends AppCompatActivity {
-
+    //create xml view links
     ImageButton browseBtn;
     ImageButton orderBtn;
 
@@ -18,6 +18,9 @@ public class MainActivity extends AppCompatActivity {
 
     FragmentManager fragmentManager;
     FragmentTransaction fragmentTransaction;
+    DetailFragment detailFragment;
+
+
 
 
     @Override
@@ -26,7 +29,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
     }
 
-    FoodAdapter<Food> foodAdapter = new FoodAdapter(getApplicationContext(),android.R.layout.food, stringArray);
+    //FoodAdapter foodAdapter = new FoodAdapter(getApplicationContext(),android.R.layout.food_detail, stringArray);
 
 
 

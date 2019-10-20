@@ -29,10 +29,10 @@ public class FoodViewHolder extends RecyclerView.ViewHolder{
     }
 
     public void buttonPressed(final int foodID) {
-        Food foodAtPosition = FakeDatabase.getArticleById(foodID);
+        //Food foodAtPosition = FakeDatabase.getArticleById(foodID);
 
-        foodName.setText(foodAtPosition.getFoodName());
-        foodImage = view.findViewById(R.id.foodImage);
+//        foodName.setText(foodAtPosition.getFoodName());
+//        foodImage = view.findViewById(R.id.foodImage);
 
         button.setOnClickListener(new View.OnClickListener(){
             @Override

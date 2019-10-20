@@ -13,7 +13,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.ArrayList;
 
-public class FoodAdapter extends RecyclerView.Adapter<FoodAdapter.FoodViewHolder>{
+public class FoodAdapter extends RecyclerView.Adapter<FoodViewHolder>{
 
     ArrayList<Food> food;
 
@@ -27,7 +27,7 @@ public class FoodAdapter extends RecyclerView.Adapter<FoodAdapter.FoodViewHolder
 
     public void onBindViewHolder(@NonNull FoodViewHolder holder, int position){
         final Food foodAtPosition = food.get(position);
-        holder.buttonPressed(foodAtPosition.getFoodID());
+        //holder.buttonPressed(foodAtPosition.getFoodID());
     }
 
     public void setFood(ArrayList<Food> food) {

@@ -2,9 +2,9 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     
 
-    xmlns:android="http://schemas.android.com/apk/res/android"
+
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
+
     android:layout_width="match_parent" android:layout_height="wrap_content">
 
     <ImageView
@@ -17,7 +17,9 @@
         app:layout_constraintEnd_toStartOf="@+id/foodName"
         app:layout_constraintStart_toStartOf="parent"
 
-        app:layout_constraintTop_toTopOf="@id/foodName" />
+        app:layout_constraintTop_toTopOf="@id/foodName"
+
+        android:background="@color/colorPrimaryDark"/>
 
 
     <TextView
@@ -34,7 +36,8 @@
         app:layout_constraintBottom_toBottomOf="parent"
 
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.507" />
+        app:layout_constraintVertical_bias="0.507"
+        android:text="foodName"/>
 
     <Button
         android:id="@+id/orderNow"
