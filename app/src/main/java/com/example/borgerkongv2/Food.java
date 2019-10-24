@@ -14,7 +14,7 @@ public class Food {
 
     //Food price
 
-    private BigDecimal price;
+    private Double price;
 
     //Food description
 
@@ -24,15 +24,56 @@ public class Food {
 
     private int imageDrawableId;
 
-    public Food (int foodID, String name, BigDecimal price, String description, int imageDrawableId){
+    public Food (int foodID, String name, Double price, String description, int imageDrawableId){
         this.foodID = foodID;
         this.name = name;
         this.price = price;
         this.description = description;
         this.imageDrawableId = imageDrawableId;
 
-        this.imageDrawableId = imageDrawableId;
 
+
+    }
+
+    public int getFoodID() {
+        return foodID;
+    }
+
+    public void setFoodID(int foodID) {
+        this.foodID = foodID;
+    }
+
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String headline) {
+        this.name = headline;
+    }
+
+    public Double getPrice() {
+        return price;
+    }
+
+    public void setPrice(String author) {
+        this.price = price;
+    }
+
+    public String getDescription() {
+        return description;
+    }
+
+    public void setDescription(String summary) {
+        this.description = summary;
+    }
+
+    public int getImageDrawableId() {
+        return imageDrawableId;
+    }
+
+    public void setImageDrawableId(int imageDrawableId) {
+        this.imageDrawableId = imageDrawableId;
     }
 
 }

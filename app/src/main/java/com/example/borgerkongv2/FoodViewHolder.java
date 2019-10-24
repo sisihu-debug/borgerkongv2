@@ -13,36 +13,45 @@ public class FoodViewHolder extends RecyclerView.ViewHolder{
 
     public View view;
     public TextView foodName;
-
+    public TextView foodPrice;
     public ImageView picture;
-    public Button button;
+//    public Button orderNowButton;
 
 
     public FoodViewHolder(View v){
         super(v);
         view = v;
-        foodName = v.findViewById(R.id.foodName);
 
+        foodName = v.findViewById(R.id.foodName);
+        foodPrice = v.findViewById(R.id.foodPrice);
         picture = v.findViewById(R.id.foodImage);
-        button = v.findViewById(R.id.orderNow);
+//        orderNowButton = v.findViewById(R.id.orderNow);
 
     }
 
     public void buttonPressed(final int foodID) {
-        //Food foodAtPosition = FakeDatabase.getArticleById(foodID);
+        final Food foodAtPosition = FoodDatabase.getFoodByID(foodID);
 
-//        foodName.setText(foodAtPosition.getFoodName());
-//        foodImage = view.findViewById(R.id.foodImage);
+//        foodName.setText(foodAtPosition.getName());
+//        foodPrice.setText(foodAtPosition.getPrice().toString());
 
-        button.setOnClickListener(new View.OnClickListener(){
-            @Override
-            public void onClick(View v) {
-                Context context = v.getContext();
-                Intent intent = new Intent(context,Detail_Activity.class);
-                intent.putExtra("FoodID", foodID);
-                context.startActivity(intent);
-            }
-        });
+
+//        orderNowButton.setOnClickListener(new View.OnClickListener(){
+//            @Override
+//            public void onClick(View v) {
+////                Context context = v.getContext();
+////                Intent intent = new Intent(context,Detail_Activity.class);
+////                intent.putExtra("FoodID", foodID);
+////                context.startActivity(intent);
+//
+//                Context context = view.getContext();
+//
+//                Intent intent = new Intent(context, Detail_Activity.class);
+//                intent.putExtra("FoodID", foodAtPosition.getFoodID());
+//                context.startActivity(intent);
+//
+//            }
+//        });
 
     }
 }

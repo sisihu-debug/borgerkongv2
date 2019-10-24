@@ -19,7 +19,7 @@
 
         app:layout_constraintTop_toTopOf="@id/foodName"
 
-        android:background="@color/colorPrimaryDark"/>
+        />
 
 
     <TextView
@@ -37,17 +37,17 @@
 
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.507"
-        android:text="foodName"/>
+        />
 
-    <Button
-        android:id="@+id/orderNow"
-        android:layout_width="80dp"
-        android:layout_height="69dp"
-        android:layout_marginRight="10dp"
-        android:layout_marginTop="20dp"
-        android:text="Order Now">
+<!--    <Button-->
+<!--        android:id="@+id/orderNow"-->
+<!--        android:layout_width="80dp"-->
+<!--        android:layout_height="69dp"-->
+<!--        android:layout_marginRight="10dp"-->
+<!--        android:layout_marginTop="20dp"-->
+<!--        android:text="Order Now">-->
 
-    </Button>
+<!--    </Button>-->
 
 
 
