@@ -1,10 +1,14 @@
 package com.example.borgerkongv2;
 
+import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -14,7 +18,9 @@ public class Detail_Activity extends AppCompatActivity {
     private TextView priceTextView;
     private TextView despTextView;
     private ImageView imageView;
+    private ImageButton placeOrder;
 
+    View view;
 
     @Override
     protected void onCreate(Bundle savedInstanceState){
@@ -35,6 +41,7 @@ public class Detail_Activity extends AppCompatActivity {
         priceTextView = findViewById(R.id.foodPrice);
         despTextView = findViewById(R.id.foodDescription);
         imageView = findViewById(R.id.foodImage);
+        placeOrder = findViewById(R.id.orderBtn);
 
         // Set the views to show the data of our object
         nameTextView.setText(food.getName());
@@ -44,10 +51,30 @@ public class Detail_Activity extends AppCompatActivity {
 
 
 
+        placeOrder.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
 
+                Context context = view.getContext();
+
+                Intent intent = new Intent(context, OrderDatabase.class);
+
+                intent.putExtra(int foodID, int 1);
+
+
+//                intent.putExtra("FoodID", foodAtPosition.getFoodID());
+//                context.startActivity(intent);
+
+
+            }
+
+
+        });
 
 
     }
+
+
 
 
 }
