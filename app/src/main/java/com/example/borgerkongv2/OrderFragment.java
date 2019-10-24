@@ -55,23 +55,22 @@ public class OrderFragment extends Fragment {
         orderTotalTV = view.findViewById(R.id.orderTotalTV);
         orderTotalButton = view.findViewById(R.id.orderTotalBtn);
 
-
-
-        return view;
-
-
         orderTotalButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
 
                 Double orderTotalView = OrderCalculation.calculateOrder(OrderDatabase.orders);
 
-                orderTotalTV.setText(orderTotalView.toString());
+                String stringdouble = Double.toString(orderTotalView);
+
+                orderTotalTV.setText(stringdouble);
+
             }
         });
 
 
 
+        return view;
 
     }
 

@@ -54,17 +54,17 @@ public class FoodAdapter extends RecyclerView.Adapter<FoodViewHolder>{
             }
         });
 
-        holder.picture.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Context context = view.getContext();
-                Intent intent = new Intent(Intent.ACTION_SEND);
-
-                intent.putExtra(Intent.EXTRA_TEXT, foodAtPosition.getName());
-                intent.setType("text/plain");
-                context.startActivity(intent);
-            }
-        });
+//        holder.picture.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//                Context context = view.getContext();
+//                Intent intent = new Intent(Intent.ACTION_SEND);
+//
+//                intent.putExtra(Intent.EXTRA_TEXT, foodAtPosition.getName());
+//                intent.setType("text/plain");
+//                context.startActivity(intent);
+//            }
+//        });
 
         holder.picture.setImageResource(foodAtPosition.getImageDrawableId());
     }

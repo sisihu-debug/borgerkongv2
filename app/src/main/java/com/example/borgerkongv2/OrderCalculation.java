@@ -6,8 +6,8 @@ import java.util.Map;
 
 public class OrderCalculation {
 
-    public static double calculateOrder( HashMap<Integer,Integer> orders){
-        double totalAmount = 0.0;
+    public static Double calculateOrder( HashMap<Integer,Integer> orders){
+        Double totalAmount = 0.0;
 
         Iterator orderIterator = orders.entrySet().iterator();
 
@@ -21,6 +21,7 @@ public class OrderCalculation {
         }
 
         return totalAmount;
+
 
 
 //for loops dont work for hashmaps

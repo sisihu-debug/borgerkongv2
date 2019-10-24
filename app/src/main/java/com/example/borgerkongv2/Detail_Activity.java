@@ -41,7 +41,7 @@ public class Detail_Activity extends AppCompatActivity {
         priceTextView = findViewById(R.id.foodPrice);
         despTextView = findViewById(R.id.foodDescription);
         imageView = findViewById(R.id.foodImage);
-        placeOrder = findViewById(R.id.orderBtn);
+        placeOrder = findViewById(R.id.placeOrder);
 
         // Set the views to show the data of our object
         nameTextView.setText(food.getName());
@@ -55,7 +55,7 @@ public class Detail_Activity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-                Context context = view.getContext();
+
 
                 OrderDatabase.addToOrder(food.getFoodID(),1);
 
