@@ -31,11 +31,11 @@ public class Detail_Activity extends AppCompatActivity {
         Intent intent = getIntent();
 
         // Get the extra identified by "ArticleID" that was put into the intent at the origin.
-        int foodID = intent.getIntExtra("FoodID", 0);
+        final int foodID = intent.getIntExtra("FoodID", 0);
 
         // Now that we were passed the ID of the clicked item, we can get the rest of the data
         // from the "database". Imagine this could be a real SQL database.
-        Food food = FoodDatabase.getFoodByID(foodID);
+        final Food food = FoodDatabase.getFoodByID(foodID);
 
         nameTextView = findViewById(R.id.foodName);
         priceTextView = findViewById(R.id.foodPrice);
@@ -57,9 +57,11 @@ public class Detail_Activity extends AppCompatActivity {
 
                 Context context = view.getContext();
 
-                Intent intent = new Intent(context, OrderDatabase.class);
+                OrderDatabase.addToOrder(food.getFoodID(),1);
 
-                intent.putExtra(int foodID, int 1);
+
+
+
 
 
 //                intent.putExtra("FoodID", foodAtPosition.getFoodID());

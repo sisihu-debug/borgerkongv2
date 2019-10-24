@@ -1,16 +1,21 @@
 package com.example.borgerkongv2;
 
 
+import android.content.Intent;
 import android.media.Image;
 import android.os.Bundle;
 
+import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
+
+import java.util.HashMap;
 
 
 /**
@@ -24,6 +29,8 @@ public class OrderFragment extends Fragment {
     private TextView detail_foodPriceTextView;
     private TextView detail_foodDescriptionTextView;
     private ImageView detail_foodImageImageView;
+    private TextView orderTotalTV;
+    private Button orderTotalButton;
 
 
 
@@ -45,8 +52,37 @@ public class OrderFragment extends Fragment {
         detail_foodPriceTextView = view.findViewById(R.id.detail_foodPrice);
         detail_foodDescriptionTextView = view.findViewById(R.id.detail_foodDescription);
         detail_foodImageImageView = view.findViewById(R.id.detail_foodImage);
+        orderTotalTV = view.findViewById(R.id.orderTotalTV);
+        orderTotalButton = view.findViewById(R.id.orderTotalBtn);
+
+
 
         return view;
+
+
+        orderTotalButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                Double orderTotalView = OrderCalculation.calculateOrder(OrderDatabase.orders);
+
+                orderTotalTV.setText(orderTotalView.toString());
+            }
+        });
+
+
+
+
     }
+
+
+
+
+
+
+
+
+
+
 
 }
