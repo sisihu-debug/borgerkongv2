@@ -6,14 +6,15 @@ import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
 import android.widget.ImageButton;
 
 
 
 public class MainActivity extends AppCompatActivity {
     //create xml view links
-    ImageButton browseBtn;
-    ImageButton orderBtn;
+    Button browseBtn;
+    Button orderBtn;
 
     //Create FragLinks
 

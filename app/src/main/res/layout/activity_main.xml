@@ -39,13 +39,15 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent">
 
-        <ImageButton
+        <Button
             android:id="@+id/browseBtn"
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
+            android:layout_width="100dp"
+            android:layout_height="40dp"
             android:layout_weight="1"
             android:tag="1"
-            app:srcCompat="@android:drawable/arrow_up_float" />
+            android:text ="Browse"
+
+            />
 
 <!--        <ImageButton-->
 <!--            android:id="@+id/booksBtn"-->
@@ -55,13 +57,13 @@
 <!--            android:tag="2"-->
 <!--            app:srcCompat="@android:drawable/arrow_down_float" />-->
 
-        <ImageButton
+        <Button
             android:id="@+id/orderBtn"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="100dp"
+            android:layout_height="40dp"
             android:layout_weight="1"
-            android:tag="3"
-            app:srcCompat="@android:drawable/btn_star" />
+            android:text ="Order"
+            />
 
     </LinearLayout>
 

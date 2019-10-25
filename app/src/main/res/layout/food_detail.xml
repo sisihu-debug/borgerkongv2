@@ -5,38 +5,121 @@
     android:layout_height="match_parent"
     android:orientation="vertical">
 
-    <TextView
-        android:id="@+id/foodName"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_weight="1"
-         />
-
-    <ImageView
-        android:id="@+id/foodImage"
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_weight="1"
-         />
+        android:layout_height="600dp">
 
-    <TextView
-        android:id="@+id/foodPrice"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_weight="1"
-         />
 
-    <TextView
-        android:id="@+id/foodDescription"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_weight="1"
-         />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
 
-    <ImageButton
-        android:id="@+id/placeOrder"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_weight="1"
-        android:text="Add to Order" />
+            <TextView
+                android:id="@+id/foodName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAlignment="center"
+
+                android:textSize="50sp" />
+
+            <ImageView
+                android:id="@+id/foodImage"
+                android:layout_width="wrap_content"
+                android:layout_height="300dp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                >
+
+                <TextView
+                    android:id="@+id/dollarSign"
+                    android:layout_width="186dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="end"
+                    android:text="$"
+                    android:textSize="40sp"/>
+
+                <TextView
+                    android:id="@+id/foodPrice"
+                    android:layout_width="324dp"
+                    android:layout_height="50dp"
+                    android:textAlignment="center"
+                    android:textSize="40sp"
+                    android:gravity="right"/>
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/foodDescription"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="30dp"
+                android:paddingTop="10dp"
+                android:textSize="20sp"/>
+
+            <LinearLayout
+
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/addQuant"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="+" />
+
+                <TextView
+                    android:id="@+id/quantNumber"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                     />
+
+                <Button
+                    android:id="@+id/minusQuant"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="-" />
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/placeOrder"
+                android:layout_width="396dp"
+                android:layout_height="50dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginBottom="20dp"
+
+
+                android:text="Add to Order"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+
+        </LinearLayout>
+    </ScrollView>
+
+
+
+<!--    <androidx.constraintlayout.widget.ConstraintLayout-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="53dp"-->
+<!--        android:layout_marginLeft="10dp"-->
+<!--        android:layout_marginRight="10dp"-->
+<!--        app:layout_constraintLeft_toLeftOf="parent"-->
+<!--        app:layout_constraintBottom_toBottomOf = "parent"-->
+
+<!--        >-->
+
+    <!--    </androidx.constraintlayout.widget.ConstraintLayout>-->
+
+
 </LinearLayout>

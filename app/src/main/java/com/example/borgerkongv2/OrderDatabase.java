@@ -2,10 +2,12 @@ package com.example.borgerkongv2;
 
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Collection;
 import java.util.HashMap;
 import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
+import java.util.Set;
 
 public class OrderDatabase {
 
@@ -38,6 +40,23 @@ public class OrderDatabase {
 
 
 
+    }
+
+    public static ArrayList<Food> getAllOrders(HashMap<Integer, Integer> orders) {
+
+
+
+        Set <Integer> ordersFoodID = orders.keySet();
+        ArrayList<Integer> listOfOrderFoodID = new ArrayList<Integer>(ordersFoodID);
+
+        return new ArrayList<Food>((List) Arrays.asList(listOfOrderFoodID.toArray()));
+
+        //order class quantity and food id
+        //coonvert hashmap to order items
+
+        //converts hashmap of orders to arraylist as orders, and then multiply by price
+
+        //arraylist new order add these food items, arraylist.add()
     }
 
 //    public static double calculateOrder( HashMap<Integer,Integer> orders){

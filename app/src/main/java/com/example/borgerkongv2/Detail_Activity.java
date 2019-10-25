@@ -18,7 +18,10 @@ public class Detail_Activity extends AppCompatActivity {
     private TextView priceTextView;
     private TextView despTextView;
     private ImageView imageView;
-    private ImageButton placeOrder;
+    private Button placeOrder;
+    private Button addQuantity;
+    private Button minusQuantity;
+    private TextView quantityTextView;
 
     View view;
 
@@ -42,6 +45,9 @@ public class Detail_Activity extends AppCompatActivity {
         despTextView = findViewById(R.id.foodDescription);
         imageView = findViewById(R.id.foodImage);
         placeOrder = findViewById(R.id.placeOrder);
+        addQuantity = findViewById(R.id.addQuant);
+        minusQuantity = findViewById(R.id.minusQuant);
+        quantityTextView = findViewById(R.id.quantNumber);
 
         // Set the views to show the data of our object
         nameTextView.setText(food.getName());
@@ -51,13 +57,60 @@ public class Detail_Activity extends AppCompatActivity {
 
 
 
+        //set initial quantity
+        final int initialQuantity = 1;
+
+        quantityTextView.setText(String.valueOf(initialQuantity));
+
+        addQuantity.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v){
+
+
+
+                String newQuantityString = quantityTextView.getText().toString();
+                int newQuantity = Integer.parseInt(newQuantityString);
+                newQuantity++;
+
+
+                quantityTextView.setText(String.valueOf(newQuantity));
+
+
+
+            }
+        });
+
+        minusQuantity.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v){
+                if( quantityTextView.getText().equals("1")){
+
+                } else{
+
+                    String newQuantityString = quantityTextView.getText().toString();
+                    int newQuantity = Integer.parseInt(newQuantityString);
+                    newQuantity--;
+
+                    quantityTextView.setText(String.valueOf(newQuantity));
+
+
+//                    quantityTextView.setText(String.valueOf(newQuantity));
+//                    int newQuantity = initialQuantity;
+//                    newQuantity--;
+//                    quantityTextView.setText(String.valueOf(newQuantity));
+                }
+
+            }
+        });
+
+
         placeOrder.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
 
 
 
-                OrderDatabase.addToOrder(food.getFoodID(),1);
+                OrderDatabase.addToOrder(food.getFoodID(),Integer.valueOf(quantityTextView.getText().toString()));
 
 
 
