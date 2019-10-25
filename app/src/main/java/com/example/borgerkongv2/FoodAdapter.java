@@ -30,17 +30,15 @@ public class FoodAdapter extends RecyclerView.Adapter<FoodViewHolder>{
     }
 
     public void onBindViewHolder(@NonNull FoodViewHolder holder, int position){
-//my news app attempt 1
-        //        final Food foodAtPosition = foodToAdapt.get(position);
-//        holder.buttonPressed(foodAtPosition.getFoodID());
 
 
-        //Attempt 2 NYT
+
+
 
         final Food foodAtPosition = foodToAdapt.get(position);
 
         holder.foodName.setText(foodAtPosition.getName());
-        //holder.foodPrice.setText(foodAtPosition.getPrice().toString());
+
 
 
         holder.view.setOnClickListener(new View.OnClickListener() {
@@ -54,17 +52,6 @@ public class FoodAdapter extends RecyclerView.Adapter<FoodViewHolder>{
             }
         });
 
-//        holder.picture.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View view) {
-//                Context context = view.getContext();
-//                Intent intent = new Intent(Intent.ACTION_SEND);
-//
-//                intent.putExtra(Intent.EXTRA_TEXT, foodAtPosition.getName());
-//                intent.setType("text/plain");
-//                context.startActivity(intent);
-//            }
-//        });
 
         holder.picture.setImageResource(foodAtPosition.getImageDrawableId());
     }

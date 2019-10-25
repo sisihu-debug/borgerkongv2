@@ -29,8 +29,8 @@
         android:paddingLeft="16dp"
         android:paddingRight="16dp"
 
-        android:textColor="@color/colorPrimaryDark"
-        android:textSize="30dp"
+        android:textColor="@color/black"
+        android:textSize="20dp"
 
         app:layout_constraintBottom_toBottomOf="parent"
 
@@ -42,7 +42,11 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_weight="1"
-        android:text="TextView" />
+        android:text="TextView"
+
+        android:layout_marginLeft="20dp"
+        android:textColor="@color/black"
+        android:textSize="20sp"/>
 
 
 </LinearLayout>

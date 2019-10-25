@@ -5,5 +5,6 @@
     <color name="colorAccent">#D81B60</color>
     <color name = "borgerKongRed">#ED1C23</color>
     <color name = "white">#FFFFFF</color>
+    <color name ="black">#000000</color>
     <color name = "borgerKongYellow">#FEC20F</color>
 </resources>

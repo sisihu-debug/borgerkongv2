@@ -22,21 +22,5 @@ public class OrderCalculation {
 
         return totalAmount;
 
-
-
-//for loops dont work for hashmaps
-
-
-//        for( int x = 0; x <= orders.size(); x++){
-//            Food food = FoodDatabase.getFoodByID(foodID);
-//            Double foodItemPrice = food.getPrice();
-//            int foodQuantity = orders.get(foodID);
-//
-//
-//        }
-
-
-
-
     }
 }

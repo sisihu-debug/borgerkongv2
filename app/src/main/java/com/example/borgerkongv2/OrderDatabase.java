@@ -44,34 +44,10 @@ public class OrderDatabase {
 
     public static ArrayList<Order> getAllOrders() {
 
-        //convert hashmap
 
-//        Set <Integer> ordersFoodID = orders.keySet();
-//        ArrayList<Integer> listOfOrderFoodID = new ArrayList<Integer>(ordersFoodID);
-
-//        Set<Map.Entry<Integer, Integer>> demoEntrySet = orders.entrySet();
-//        ArrayList<Map.Entry<Integer, Integer>> demoList = new ArrayList<Map.Entry<Integer,Integer>>(demoEntrySet);
-//
-//
-//
-//
-//        return new ArrayList<Order>((List) Arrays.asList(demoList.toArray()));
         ArrayList<Order> newOrdersArrayList = new ArrayList<>();
 
-        //Attempt 1
 
-//        Iterator it = orders.entrySet().iterator();
-//
-//
-//        while (it.hasNext()) {
-//            newOrdersArrayList.add(new Order(orders));
-//
-//
-//            Map.Entry pairs = (Map.Entry) it.next();
-//
-//        }
-
-        //attempt 2
         Iterator orderIterator = orders.entrySet().iterator();
         while (orderIterator.hasNext()) {
             Map.Entry<Integer, Integer> order = (Map.Entry) orderIterator.next();

@@ -23,7 +23,7 @@ public class Detail_Activity extends AppCompatActivity {
     private Button minusQuantity;
     private TextView quantityTextView;
 
-    View view;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState){
@@ -59,8 +59,6 @@ public class Detail_Activity extends AppCompatActivity {
         imageView.setImageResource(food.getImageDrawableId());
 
 
-
-
         //set initial quantity
         final int initialQuantity = 1;
 
@@ -70,16 +68,11 @@ public class Detail_Activity extends AppCompatActivity {
             @Override
             public void onClick(View v){
 
-
-
                 String newQuantityString = quantityTextView.getText().toString();
                 int newQuantity = Integer.parseInt(newQuantityString);
                 newQuantity++;
 
-
                 quantityTextView.setText(String.valueOf(newQuantity));
-
-
 
             }
         });
@@ -97,11 +90,6 @@ public class Detail_Activity extends AppCompatActivity {
 
                     quantityTextView.setText(String.valueOf(newQuantity));
 
-
-//                    quantityTextView.setText(String.valueOf(newQuantity));
-//                    int newQuantity = initialQuantity;
-//                    newQuantity--;
-//                    quantityTextView.setText(String.valueOf(newQuantity));
                 }
 
             }
@@ -112,8 +100,6 @@ public class Detail_Activity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-
-
                 OrderDatabase.addToOrder(food.getFoodID(),Integer.valueOf(quantityTextView.getText().toString()));
                 Context context = getApplicationContext();
                 CharSequence text = "Added to Order!";
@@ -121,15 +107,6 @@ public class Detail_Activity extends AppCompatActivity {
 
                 Toast toast = Toast.makeText(context, text, duration);
                 toast.show();
-
-
-
-
-
-
-//                intent.putExtra("FoodID", foodAtPosition.getFoodID());
-//                context.startActivity(intent);
-
 
             }
 

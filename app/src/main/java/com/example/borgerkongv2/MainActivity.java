@@ -81,7 +81,7 @@ public class MainActivity extends AppCompatActivity {
         fragmentTransaction.commit();
     }
 
-    //FoodAdapter foodAdapter = new FoodAdapter(getApplicationContext(),android.R.layout.food_detail, stringArray);
+
 
 
 

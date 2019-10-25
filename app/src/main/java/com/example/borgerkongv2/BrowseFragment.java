@@ -5,9 +5,7 @@ import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
 
-import android.app.Activity;
 
-import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.RecyclerView;
 import androidx.recyclerview.widget.LinearLayoutManager;
 
@@ -58,7 +56,7 @@ public class BrowseFragment extends Fragment {
     public void onResume() {
         super.onResume();
         MainActivity parent = (MainActivity) getActivity();
-//        parent.showCoolMessage("cool (from ArticleRecyclerFragment onResume)");
+
     }
 
 }
