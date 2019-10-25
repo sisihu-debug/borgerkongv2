@@ -44,7 +44,7 @@ public class OrderDatabase {
 
     public static ArrayList<Food> getAllOrders(HashMap<Integer, Integer> orders) {
 
-
+        //convert hashmap
 
         Set <Integer> ordersFoodID = orders.keySet();
         ArrayList<Integer> listOfOrderFoodID = new ArrayList<Integer>(ordersFoodID);

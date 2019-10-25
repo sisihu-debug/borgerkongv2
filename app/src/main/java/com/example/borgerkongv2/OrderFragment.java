@@ -61,9 +61,9 @@ public class OrderFragment extends Fragment {
         recyclerView.setLayoutManager(layoutManager);
 
         //creating and using customer adapter
-//        OrderAdapter orderAdapter = new OrderAdapter();
-//        orderAdapter.setFood(OrderDatabase.getAllOrders(OrderDatabase.orders));
-//        recyclerView.setAdapter(orderAdapter);
+        OrderAdapter orderAdapter = new OrderAdapter();
+        orderAdapter.setData(OrderDatabase.getAllOrders(OrderDatabase.orders));
+        recyclerView.setAdapter(orderAdapter);
 
 //        detail_foodNameTextView = view.findViewById(R.id.detail_foodName);
 //        detail_foodPriceTextView = view.findViewById(R.id.detail_foodPrice);

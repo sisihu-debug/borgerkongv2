@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+
+    <ImageView
+        android:id="@+id/foodImageOrderRow"
+        android:layout_width="124dp"
+        android:layout_height="124dp"
+
+
+        android:layout_marginLeft="10dp"
+        app:layout_constraintEnd_toStartOf="@+id/foodName"
+        app:layout_constraintStart_toStartOf="parent"
+
+        app:layout_constraintTop_toTopOf="@id/foodName"
+
+        />
+
+
+    <TextView
+        android:id="@+id/foodNameOrderRow"
+        android:layout_width="157dp"
+        android:layout_height="118dp"
+        android:gravity="center"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp"
+
+        android:textColor="@color/colorPrimaryDark"
+        android:textSize="30dp"
+
+        app:layout_constraintBottom_toBottomOf="parent"
+
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.507" />
+
+    <TextView
+        android:id="@+id/quantityOrderRow"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:text="TextView" />
+
+
+</LinearLayout>

@@ -12,33 +12,37 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.ArrayList;
 
-public class OrderAdapter extends RecyclerView.Adapter<FoodViewHolder> {
+public class OrderAdapter extends RecyclerView.Adapter<OrderViewHolder> {
+
+    //call method to return order items list
 
     ArrayList<Food> orderToAdapt;
 
-    public void setOrder(ArrayList<Food> orderToAdapt){
+
+    public void setData(ArrayList<Food> orderToAdapt){
         this.orderToAdapt = orderToAdapt;
+
+
     }
 
     @Override
-    public FoodViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType){
-        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.food_row,parent,false);
+    public OrderViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType){
+        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.order_row,parent,false);
 
-        FoodViewHolder foodViewHolder = new FoodViewHolder(view);
-        return foodViewHolder;
+        OrderViewHolder orderViewHolder = new OrderViewHolder(view);
+        return orderViewHolder;
     }
 
-    public void onBindViewHolder(@NonNull FoodViewHolder holder, int position){
-//my news app attempt 1
-        //        final Food foodAtPosition = foodToAdapt.get(position);
-//        holder.buttonPressed(foodAtPosition.getFoodID());
+    @Override
+    public void onBindViewHolder(@NonNull OrderViewHolder holder, int position){
+
+        //view holder, position of recycler view
+        //holder.articleID = setTime.order.getFoodID;
 
 
-        //Attempt 2 NYT
+        final Order orderAtPosition = orderToAdapt.get(position);
 
-        final Food foodAtPosition = orderToAdapt.get(position);
-
-        holder.foodName.setText(foodAtPosition.getName());
+        holder.foodName.setText(orderAtPosition.getName());
         //holder.foodPrice.setText(foodAtPosition.getPrice().toString());
 
 
@@ -53,17 +57,20 @@ public class OrderAdapter extends RecyclerView.Adapter<FoodViewHolder> {
             }
         });
 
-//        holder.picture.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View view) {
-//                Context context = view.getContext();
-//                Intent intent = new Intent(Intent.ACTION_SEND);
-//
-//                intent.putExtra(Intent.EXTRA_TEXT, foodAtPosition.getName());
-//                intent.setType("text/plain");
-//                context.startActivity(intent);
-//            }
-//        });
+        holder.picture.setOnClickListener(new View.OnClickListener() {
+
+
+            @Override
+            public void onClick(View view) {
+                Context context = view.getContext();
+
+                Intent intent = new Intent(context, Detail_Activity.class);
+                intent.putExtra("FoodID", foodAtPosition.getFoodID());
+                context.startActivity(intent);
+            }
+
+
+        });
 
         holder.picture.setImageResource(foodAtPosition.getImageDrawableId());
     }
