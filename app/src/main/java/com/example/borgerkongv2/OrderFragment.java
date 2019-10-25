@@ -70,27 +70,38 @@ public class OrderFragment extends Fragment {
 //        detail_foodDescriptionTextView = view.findViewById(R.id.detail_foodDescription);
 //        detail_foodImageImageView = view.findViewById(R.id.detail_foodImage);
         orderTotalTV = view.findViewById(R.id.orderTotalTV);
-        orderTotalButton = view.findViewById(R.id.orderTotalBtn);
+//        orderTotalButton = view.findViewById(R.id.orderTotalBtn);
 
-        orderTotalButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
+        Double orderTotalView = OrderCalculation.calculateOrder(OrderDatabase.orders);
 
-                Double orderTotalView = OrderCalculation.calculateOrder(OrderDatabase.orders);
-
-                DecimalFormat df = new DecimalFormat("#.##");
+        DecimalFormat df = new DecimalFormat("#.##");
 
 
-                String orderTotalViewTwoDecimal = df.format(orderTotalView);
+        String orderTotalViewTwoDecimal = df.format(orderTotalView);
 
-                String dollarSign = "$";
+        String dollarSign = "$";
 
-                orderTotalTV.setText(dollarSign+orderTotalViewTwoDecimal);
+        orderTotalTV.setText(dollarSign+orderTotalViewTwoDecimal);
 
-
-
-            }
-        });
+//        orderTotalButton.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//
+////                Double orderTotalView = OrderCalculation.calculateOrder(OrderDatabase.orders);
+////
+////                DecimalFormat df = new DecimalFormat("#.##");
+////
+////
+////                String orderTotalViewTwoDecimal = df.format(orderTotalView);
+////
+////                String dollarSign = "$";
+////
+////                orderTotalTV.setText(dollarSign+orderTotalViewTwoDecimal);
+//
+//
+//
+//            }
+//        });
 
 
 
