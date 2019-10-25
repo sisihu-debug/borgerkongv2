@@ -33,13 +33,14 @@ public class FoodAdapter extends RecyclerView.Adapter<FoodViewHolder>{
 
 
 
-
+        //set the details for each row of the recycler view
 
         final Food foodAtPosition = foodToAdapt.get(position);
 
         holder.foodName.setText(foodAtPosition.getName());
 
 
+        //launch the detailed view when user clicks on the row
 
         holder.view.setOnClickListener(new View.OnClickListener() {
             @Override

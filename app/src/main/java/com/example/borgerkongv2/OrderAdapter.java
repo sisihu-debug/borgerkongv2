@@ -14,13 +14,13 @@ import java.util.ArrayList;
 
 public class OrderAdapter extends RecyclerView.Adapter<OrderViewHolder> {
 
-    //call method to return order items list
+    //instantiate an ordertoadapt arraylist
 
     ArrayList<Order> orderToAdapt;
 
 
 
-
+    //set data to add orders to orderToAdapt
     public void setData(ArrayList<Order> orderToAdapt){
         this.orderToAdapt = orderToAdapt;
 
@@ -40,7 +40,7 @@ public class OrderAdapter extends RecyclerView.Adapter<OrderViewHolder> {
     @Override
     public void onBindViewHolder(@NonNull OrderViewHolder holder, int position){
 
-
+        //set each row of order data
 
 
         final Order orderAtPosition = orderToAdapt.get(position);
@@ -58,6 +58,8 @@ public class OrderAdapter extends RecyclerView.Adapter<OrderViewHolder> {
 
         holder.picture.setImageResource(foodAtPosition.getImageDrawableId());
 
+
+        //lead user back to details page if needed to check details of ordered foods
 
         holder.view.setOnClickListener(new View.OnClickListener() {
             @Override

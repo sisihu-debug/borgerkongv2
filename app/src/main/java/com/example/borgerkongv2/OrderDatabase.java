@@ -11,15 +11,7 @@ import java.util.Set;
 
 public class OrderDatabase {
 
-//    public static OrderDatabase getFoodByID(int foodID) {
-//        return OrderDatabase.get(foodID);
-//    }
-
-//    public static ArrayList<Food> getAllFood() {
-//        return new ArrayList<Food>((List) Arrays.asList(food.values().toArray()));
-
-        //converts hashmap of orders to arraylist as orders, and then multiply by price
-   // }
+    //instantiate a hashmap to present the Food ID and quantity of food
 
     public static final HashMap<Integer, Integer> orders = new HashMap<>();
 
@@ -27,6 +19,7 @@ public class OrderDatabase {
         return orders;
     }
 
+    //if food already exists, simply add the quantity to existing quantity, if it doesn't exist, add it to the hashmap as a new order
     public static void addToOrder(int foodID, int orderQuantity){
         if (orders.containsKey(foodID)){
             int prevOrderQuantity = orders.get(foodID);
@@ -48,6 +41,7 @@ public class OrderDatabase {
 
         ArrayList<Order> newOrdersArrayList = new ArrayList<>();
 
+        //returns all the orders as an arraylist from a hashmap to be passed to the adapter
 
         Iterator orderIterator = orders.entrySet().iterator();
         while (orderIterator.hasNext()) {

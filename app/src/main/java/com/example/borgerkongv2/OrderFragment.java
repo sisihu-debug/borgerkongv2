@@ -50,8 +50,7 @@ public class OrderFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
-//        return inflater.inflate(R.layout.fragment_order, container, false);
+
 
         view = inflater.inflate(R.layout.fragment_order, container, false);
         //Inflate View
@@ -65,13 +64,10 @@ public class OrderFragment extends Fragment {
         orderAdapter.setData(OrderDatabase.getAllOrders());
         recyclerView.setAdapter(orderAdapter);
 
-//        detail_foodNameTextView = view.findViewById(R.id.detail_foodName);
-//        detail_foodPriceTextView = view.findViewById(R.id.detail_foodPrice);
-//        detail_foodDescriptionTextView = view.findViewById(R.id.detail_foodDescription);
-//        detail_foodImageImageView = view.findViewById(R.id.detail_foodImage);
+        //link the xml textview for showing total price
         orderTotalTV = view.findViewById(R.id.orderTotalTV);
-//        orderTotalButton = view.findViewById(R.id.orderTotalBtn);
 
+        //perform calculation to show price
         Double orderTotalView = OrderCalculation.calculateOrder(OrderDatabase.orders);
 
         DecimalFormat df = new DecimalFormat("#.##");
@@ -83,25 +79,6 @@ public class OrderFragment extends Fragment {
 
         orderTotalTV.setText(dollarSign+orderTotalViewTwoDecimal);
 
-//        orderTotalButton.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//
-////                Double orderTotalView = OrderCalculation.calculateOrder(OrderDatabase.orders);
-////
-////                DecimalFormat df = new DecimalFormat("#.##");
-////
-////
-////                String orderTotalViewTwoDecimal = df.format(orderTotalView);
-////
-////                String dollarSign = "$";
-////
-////                orderTotalTV.setText(dollarSign+orderTotalViewTwoDecimal);
-//
-//
-//
-//            }
-//        });
 
 
 

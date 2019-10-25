@@ -11,6 +11,7 @@ public class OrderCalculation {
 
         Iterator orderIterator = orders.entrySet().iterator();
 
+        // goes through the hashmap to multiply every item by its price and return a total amount of the order
         while (orderIterator.hasNext()) {
             Map.Entry<Integer, Integer> order = (Map.Entry) orderIterator.next();
             int id = order.getKey();

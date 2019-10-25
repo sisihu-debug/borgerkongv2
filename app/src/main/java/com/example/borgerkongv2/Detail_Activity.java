@@ -64,6 +64,8 @@ public class Detail_Activity extends AppCompatActivity {
 
         quantityTextView.setText(String.valueOf(initialQuantity));
 
+        //make the buttons toggle the quantity view
+
         addQuantity.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v){
@@ -95,6 +97,7 @@ public class Detail_Activity extends AppCompatActivity {
             }
         });
 
+        //place order and add it to the order database, also display toast to show user, food has been added
 
         placeOrder.setOnClickListener(new View.OnClickListener() {
             @Override

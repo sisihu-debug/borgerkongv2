@@ -20,33 +20,8 @@
         android:id="@+id/detail_linearlayout"
         android:layout_width="match_parent"
         android:layout_height="660dp"
-        android:orientation="vertical"
-        app:layout_constraintBottom_toTopOf="@+id/orderTotalBtn"
-        >
+        android:orientation="vertical">
 
-
-        <!--        <TextView-->
-        <!--            android:id="@+id/detail_foodName"-->
-        <!--            android:layout_width="wrap_content"-->
-        <!--            android:layout_height="wrap_content"-->
-        <!--            android:text="TextView" />-->
-
-        <!--        <TextView-->
-        <!--            android:id="@+id/detail_foodPrice"-->
-        <!--            android:layout_width="wrap_content"-->
-        <!--            android:layout_height="wrap_content"/>-->
-
-
-        <!--        <TextView-->
-        <!--            android:id="@+id/detail_foodDescription"-->
-        <!--            android:layout_width="match_parent"-->
-        <!--            android:layout_height="wrap_content"-->
-        <!--            android:text="TextView" />-->
-
-        <!--        <ImageView-->
-        <!--            android:id="@+id/detail_foodImage"-->
-        <!--            android:layout_width="wrap_content"-->
-        <!--            android:layout_height="wrap_content"/>-->
 
         <TextView
             android:id="@+id/orderTotalTV"
@@ -59,16 +34,7 @@
             android:textColor="@color/black"
             android:textSize="25sp" />
 
-<!--        <Button-->
-<!--            android:id="@+id/orderTotalBtn"-->
-<!--            android:layout_width="216dp"-->
-<!--            android:layout_height="wrap_content"-->
-<!--            android:layout_marginLeft="180dp"-->
-<!--            android:layout_marginRight="20dp"-->
-<!--            android:background="@color/borgerKongRed"-->
-<!--            android:text="Get Total Order"-->
 
-<!--            android:textColor="@color/white" />-->
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
