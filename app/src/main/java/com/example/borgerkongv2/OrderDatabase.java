@@ -33,6 +33,7 @@ public class OrderDatabase {
             orders.put(foodID, prevOrderQuantity + orderQuantity);
         } else{
             orders.put(foodID, orderQuantity);
+
         }
 
         Food food = FoodDatabase.getFoodByID(foodID);
@@ -53,6 +54,8 @@ public class OrderDatabase {
             Map.Entry<Integer, Integer> order = (Map.Entry) orderIterator.next();
 
             newOrdersArrayList.add(new Order(order.getKey(),order.getValue()));
+
+
 
 
 

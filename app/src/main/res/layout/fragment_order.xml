@@ -67,32 +67,33 @@
                 android:id="@+id/order_rv_main"
                 android:layout_width="408dp"
                 android:layout_height="541dp"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/orderTotalBtn"
+
+
                 app:layout_constraintStart_toStartOf="parent"
                 tools:layout_editor_absoluteX="3dp">
 
             </androidx.recyclerview.widget.RecyclerView>
 
-            <Button
-                android:id="@+id/orderTotalBtn"
-                android:layout_width="216dp"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="600dp"
-                android:layout_marginLeft="600dp"
-                android:layout_marginEnd="5dp"
-                android:layout_marginRight="5dp"
-                android:layout_marginBottom="8dp"
-                android:text="Get Total Order"
-                app:layout_constraintBottom_toTopOf="@+id/order_rv_main"
-                app:layout_constraintEnd_toStartOf="@+id/order_rv_main"
-                app:layout_constraintStart_toStartOf="parent"
-                android:background="@color/borgerKongRed"
-                android:textColor="@color/white"/>
+
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 
 
     </LinearLayout>
+    <Button
+        android:id="@+id/orderTotalBtn"
+        android:layout_width="216dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="600dp"
+        android:layout_marginLeft="600dp"
+        android:layout_marginEnd="5dp"
+        android:layout_marginRight="5dp"
+        android:layout_marginBottom="8dp"
+        android:text="Get Total Order"
+        app:layout_constraintBottom_toTopOf="@+id/order_rv_main"
+        app:layout_constraintEnd_toStartOf="@+id/order_rv_main"
+        app:layout_constraintStart_toStartOf="parent"
+        android:background="@color/borgerKongRed"
+        android:textColor="@color/white"/>
 
 </FrameLayout>
