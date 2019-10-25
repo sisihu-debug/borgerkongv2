@@ -50,10 +50,14 @@ public class Detail_Activity extends AppCompatActivity {
         quantityTextView = findViewById(R.id.quantNumber);
 
         // Set the views to show the data of our object
+
+        String dollarSign = "$";
+
         nameTextView.setText(food.getName());
-        priceTextView.setText(food.getPrice().toString());
+        priceTextView.setText(dollarSign+food.getPrice().toString());
         despTextView.setText(food.getDescription());
         imageView.setImageResource(food.getImageDrawableId());
+
 
 
 
@@ -111,6 +115,12 @@ public class Detail_Activity extends AppCompatActivity {
 
 
                 OrderDatabase.addToOrder(food.getFoodID(),Integer.valueOf(quantityTextView.getText().toString()));
+                Context context = getApplicationContext();
+                CharSequence text = "Added to Order!";
+                int duration = Toast.LENGTH_SHORT;
+
+                Toast toast = Toast.makeText(context, text, duration);
+                toast.show();
 
 
 

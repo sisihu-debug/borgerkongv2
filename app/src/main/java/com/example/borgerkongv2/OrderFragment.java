@@ -62,7 +62,7 @@ public class OrderFragment extends Fragment {
 
         //creating and using customer adapter
         OrderAdapter orderAdapter = new OrderAdapter();
-        orderAdapter.setData(OrderDatabase.getAllOrders(OrderDatabase.orders));
+        orderAdapter.setData(OrderDatabase.getAllOrders());
         recyclerView.setAdapter(orderAdapter);
 
 //        detail_foodNameTextView = view.findViewById(R.id.detail_foodName);
@@ -86,6 +86,8 @@ public class OrderFragment extends Fragment {
                 String dollarSign = "$";
 
                 orderTotalTV.setText(dollarSign+orderTotalViewTwoDecimal);
+
+
 
             }
         });

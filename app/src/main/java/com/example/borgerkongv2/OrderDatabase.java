@@ -42,14 +42,56 @@ public class OrderDatabase {
 
     }
 
-    public static ArrayList<Food> getAllOrders(HashMap<Integer, Integer> orders) {
+    public static ArrayList<Order> getAllOrders() {
 
         //convert hashmap
 
-        Set <Integer> ordersFoodID = orders.keySet();
-        ArrayList<Integer> listOfOrderFoodID = new ArrayList<Integer>(ordersFoodID);
+//        Set <Integer> ordersFoodID = orders.keySet();
+//        ArrayList<Integer> listOfOrderFoodID = new ArrayList<Integer>(ordersFoodID);
 
-        return new ArrayList<Food>((List) Arrays.asList(listOfOrderFoodID.toArray()));
+//        Set<Map.Entry<Integer, Integer>> demoEntrySet = orders.entrySet();
+//        ArrayList<Map.Entry<Integer, Integer>> demoList = new ArrayList<Map.Entry<Integer,Integer>>(demoEntrySet);
+//
+//
+//
+//
+//        return new ArrayList<Order>((List) Arrays.asList(demoList.toArray()));
+        ArrayList<Order> newOrdersArrayList = new ArrayList<>();
+
+        //Attempt 1
+
+//        Iterator it = orders.entrySet().iterator();
+//
+//
+//        while (it.hasNext()) {
+//            newOrdersArrayList.add(new Order(orders));
+//
+//
+//            Map.Entry pairs = (Map.Entry) it.next();
+//
+//        }
+
+        //attempt 2
+        Iterator orderIterator = orders.entrySet().iterator();
+        while (orderIterator.hasNext()) {
+            Map.Entry<Integer, Integer> order = (Map.Entry) orderIterator.next();
+
+            newOrdersArrayList.add(new Order(order.getKey(),order.getValue()));
+
+
+
+
+
+        }
+
+
+        return newOrdersArrayList;
+
+
+
+
+
+        //return new ArrayList<Order>((List) Arrays.asList(listOfOrderFoodID.toArray()));
 
         //order class quantity and food id
         //coonvert hashmap to order items

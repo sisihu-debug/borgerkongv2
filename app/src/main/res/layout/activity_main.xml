@@ -33,7 +33,7 @@
     <LinearLayout
         android:id="@+id/bottomBar"
         android:layout_width="431dp"
-        android:layout_height="61dp"
+        android:layout_height="50dp"
         android:orientation="horizontal"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -42,10 +42,12 @@
         <Button
             android:id="@+id/browseBtn"
             android:layout_width="100dp"
-            android:layout_height="40dp"
+            android:layout_height="50dp"
             android:layout_weight="1"
             android:tag="1"
             android:text ="Browse"
+            android:background="@color/borgerKongRed"
+            android:textColor="@color/white"
 
             />
 
@@ -60,9 +62,10 @@
         <Button
             android:id="@+id/orderBtn"
             android:layout_width="100dp"
-            android:layout_height="40dp"
+            android:layout_height="50dp"
             android:layout_weight="1"
             android:text ="Order"
+            android:background="@color/borgerKongYellow"
             />
 
     </LinearLayout>

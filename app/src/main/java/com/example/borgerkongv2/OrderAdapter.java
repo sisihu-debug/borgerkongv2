@@ -16,11 +16,14 @@ public class OrderAdapter extends RecyclerView.Adapter<OrderViewHolder> {
 
     //call method to return order items list
 
-    ArrayList<Food> orderToAdapt;
+    ArrayList<Order> orderToAdapt;
 
 
-    public void setData(ArrayList<Food> orderToAdapt){
+
+
+    public void setData(ArrayList<Order> orderToAdapt){
         this.orderToAdapt = orderToAdapt;
+
 
 
     }
@@ -36,14 +39,23 @@ public class OrderAdapter extends RecyclerView.Adapter<OrderViewHolder> {
     @Override
     public void onBindViewHolder(@NonNull OrderViewHolder holder, int position){
 
-        //view holder, position of recycler view
-        //holder.articleID = setTime.order.getFoodID;
+
 
 
         final Order orderAtPosition = orderToAdapt.get(position);
 
-        holder.foodName.setText(orderAtPosition.getName());
-        //holder.foodPrice.setText(foodAtPosition.getPrice().toString());
+        int foodIDOrderRow = orderAtPosition.getFoodID();
+
+        Food foodAtPosition = FoodDatabase.getFoodByID(foodIDOrderRow);
+
+        holder.foodName.setText(foodAtPosition.getName());
+
+        holder.orderQuantity.setText(String.valueOf(orderAtPosition.getOrderQuantity()));
+
+        holder.foodName.setText(foodAtPosition.getName());
+
+
+        holder.picture.setImageResource(foodAtPosition.getImageDrawableId());
 
 
         holder.view.setOnClickListener(new View.OnClickListener() {
@@ -52,7 +64,7 @@ public class OrderAdapter extends RecyclerView.Adapter<OrderViewHolder> {
                 Context context = view.getContext();
 
                 Intent intent = new Intent(context, Detail_Activity.class);
-                intent.putExtra("FoodID", foodAtPosition.getFoodID());
+                intent.putExtra("FoodID", orderAtPosition.getFoodID());
                 context.startActivity(intent);
             }
         });
@@ -65,20 +77,17 @@ public class OrderAdapter extends RecyclerView.Adapter<OrderViewHolder> {
                 Context context = view.getContext();
 
                 Intent intent = new Intent(context, Detail_Activity.class);
-                intent.putExtra("FoodID", foodAtPosition.getFoodID());
+                intent.putExtra("FoodID", orderAtPosition.getFoodID());
                 context.startActivity(intent);
             }
 
 
         });
 
-        holder.picture.setImageResource(foodAtPosition.getImageDrawableId());
-    }
-
-    public void setFood(ArrayList<Food> food) {
-        this.orderToAdapt = food;
 
     }
+
+
 
     @Override
     public int getItemCount() {
